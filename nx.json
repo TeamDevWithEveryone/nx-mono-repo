@@ -1,0 +1,62 @@
+{
+  "npmScope": "team-dev-monorepo",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "NjEwMDk1YzctZmU0ZC00OTkzLWJmNGUtZjExNTkyYWMwYTRlfHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "web-csv-to-json": {
+      "tags": []
+    },
+    "web-csv-to-json-e2e": {
+      "tags": [],
+      "implicitDependencies": ["web-csv-to-json"]
+    },
+    "xplat-core": {
+      "tags": []
+    },
+    "xplat-features": {
+      "tags": []
+    },
+    "xplat-scss": {
+      "tags": []
+    },
+    "xplat-utils": {
+      "tags": []
+    },
+    "xplat-web-core": {
+      "tags": []
+    },
+    "xplat-web-features": {
+      "tags": []
+    },
+    "xplat-web-scss": {
+      "tags": []
+    }
+  }
+}
